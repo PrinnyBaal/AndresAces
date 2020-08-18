@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Andre's Aces</title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="Styling/sample.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/sheetStats.js"></script>
+  <script src="src/view/sheetLogic.js"></script>
+
+  <script>
+   window.addEventListener( "load", sheetProj.view.sheetLogic.setupUserInterface);
+  </script>
+</head>
+
+<style>
+</style>
+<body>
+  <div  class="container-fluid pt-2" id="shopBanner">
+    <div class="row  h-75" >
+      <div class="col-1 offset-1" id="bannerImage">
+
+      </div>
+      <div class="col my-auto" id="bannerTitle">
+        Andre’s Aces
+      </div>
+    </div>
+    <div class="row h-25">
+      <div class="offset-4 col-8" >
+        <p id="bannerTagline">Book Reviews You can Use!</p>
+      </div>
+    </div>
+
+  </div>
+  <div id="tabRow">
+      <button class="tabButton physicalButton" onclick="librarian.displayShelf();">Explore Reviews</button>
+      <button class="tabButton physicalButton" onclick="librarian.displayMyShelf();">Manage MyShelf</button>
+
+  </div>
+  <div id="reportArea"></div>
+
+  <div id="footer" class="container-fluid">
+
+
+      <!--  City/State
+            E-mail
+            Contact form might be fun-->
+      <div class="row h-100">
+
+        <div class="col" >
+          <br>
+          <p><b>Credits</b></p>
+          <hr>
+          <p><emsp>Banner Image (Ace of Spades): <a href="https://icons8.com/icon/64668/ace-of-spades">Ace of Spades icon by Icons8</a></p>
+          <p><emsp>Rating Stars: <a href="https://icons8.com/icons/set/star--v1">Star icon by Icons8</a></p>
+          <p><emsp>Shelf Icons: <a href="https://icons8.com/icon/48364/book-shelf">Book Shelf icon by Icons8</a></p>
+
+          <!-- <a href="https://icons8.com/icon/48345/chevron-right">Chevron Right icon by Icons8</a> -->
+
+
+        </div>
+      </div>
+  </div>
+
+<div id="alertBanner"></div>
+</body>
+
+
+<!-- plugins to con sider -->
+
+<!-- Boxfit allows us to scale text to fit dynamically sized divs....well, at least it helps you'll have to call it each time the div changes size https://michikono.github.io/boxfit/ -->
+<!-- <script src="bower_components/jquery.boxfit/dist/jquery.boxfit.min.js" type="text/javascript"></script> -->
