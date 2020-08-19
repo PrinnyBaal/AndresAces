@@ -16,29 +16,35 @@ $championSteel:#8B8E85;
 $confirmGreen:#77dd77;
 $rejectRed:#dd7777;
 
-$paperBG:"../images/roughPaper.png";
-$shelvedIcon:"url(../images/shelved.png)";
-$unshelvedIcon:"url(../images/unshelved.png)";
+$paperBG:"./images/roughPaper.png";
+$shelvedIcon:'../images/shelved.png';
+$unshelvedIcon:'../images/unshelved.png';
+
+$breakpoint-tablet: 768px;
+
+
+
 
 .shelveButton{
   background-color:$confirmGreen;
-  padding-left:1em;
+  padding-left:3rem;
   position:relative;
 
   .buttonIcon{
-    height:1em;
-    width:1em;
+    height:2.5rem;
+    width:2.5rem;
     position:absolute;
     left:0;
+    top:0;
     background-repeat: no-repeat;
     background-size:100% 100%;
   }
   .shelvedIcon{
-    background-image:$shelvedIcon;
+    background-image:url($shelvedIcon);
 
   }
   .unshelvedIcon{
-    background-image:$unshelvedIcon;
+    background-image:url($unshelvedIcon);
 
   }
 }
@@ -46,6 +52,8 @@ $unshelvedIcon:"url(../images/unshelved.png)";
 .unshelveButton{
   background-color:$rejectRed;
 }
+
+
 
 #reportArea{
   height:98vh;
@@ -122,6 +130,7 @@ $unshelvedIcon:"url(../images/unshelved.png)";
         height:9rem;
         padding-left: 1em;
         padding-right: 2em;
+        overflow:auto;
       }
       .buttonRow{
         display:flex;
@@ -131,6 +140,20 @@ $unshelvedIcon:"url(../images/unshelved.png)";
       }
     }
 
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #reportArea{
+    width:90vw;
+    margin-left:5vw;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #reportArea{
+    width:100vw;
+    margin-left:0vw;
   }
 }
 

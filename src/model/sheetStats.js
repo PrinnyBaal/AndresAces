@@ -1,7 +1,7 @@
 const bookShelf=[];
 
-const goldStar=`../images/goldStar.png`;
-const greyStar=`../images/emptyStar.png`;
+const goldStar=`./images/goldStar.png`;
+const greyStar=`./images/emptyStar.png`;
 
 let myShelf=[];
 
@@ -111,8 +111,8 @@ let librarian={
                 <hr></p>
               <p>${book.blurb}</p>
           </div>
-          <div class="buttonRow">
-            <button class="shelveButton" onclick='librarian.shelveBook(${index})'>Add to MyShelf</button>
+          <div id="buttonRow${index}" class="buttonRow">
+            ${librarian.getButtonRow(index)}
           </div>
         </div>
       </div>

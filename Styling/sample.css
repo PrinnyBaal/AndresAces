@@ -1,21 +1,22 @@
 .shelveButton {
   background-color: #77dd77;
-  padding-left: 1em;
+  padding-left: 3rem;
   position: relative;
 }
 .shelveButton .buttonIcon {
-  height: 1em;
-  width: 1em;
+  height: 2.5rem;
+  width: 2.5rem;
   position: absolute;
   left: 0;
+  top: 0;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .shelveButton .shelvedIcon {
-  background-image: "url(../images/shelved.png)";
+  background-image: url("../images/shelved.png");
 }
 .shelveButton .unshelvedIcon {
-  background-image: "url(../images/unshelved.png)";
+  background-image: url("../images/unshelved.png");
 }
 
 .unshelveButton {
@@ -85,6 +86,7 @@
   height: 9rem;
   padding-left: 1em;
   padding-right: 2em;
+  overflow: auto;
 }
 #reportArea .bookmarkReview .infoSegment .buttonRow {
   display: flex;
@@ -92,6 +94,18 @@
   height: 3rem;
 }
 
+@media only screen and (max-width: 1100px) {
+  #reportArea {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #reportArea {
+    width: 100vw;
+    margin-left: 0vw;
+  }
+}
 .hoverFlow {
   overflow: hidden;
 }
